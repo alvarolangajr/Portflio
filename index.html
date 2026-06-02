@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Basic page setup and metadata -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Browser tab title -->
     <title>Alvaro Langa Junior | Portfolio</title>
+
+    <!-- Short description for search engines / page info -->
     <meta
       name="description"
       content="Portfolio of Alvaro Langa Junior, a Computer Science student building web applications and practical software projects."
     />
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- =========================
+         HEADER
+         Contains desktop and mobile navigation
+    ========================== -->
     <header>
+
+      <!-- Desktop navigation bar -->
       <nav id="desktop-nav" aria-label="Main navigation">
+        <!-- Portfolio name / logo text -->
         <div class="logo">Alvaro Langa Junior</div>
+
+        <!-- Main navigation links -->
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -23,14 +40,20 @@
         </ul>
       </nav>
 
+      <!-- Mobile navigation bar -->
       <nav id="hamburger-nav" aria-label="Mobile navigation">
+        <!-- Portfolio name / logo text -->
         <div class="logo">Alvaro Langa Junior</div>
+
         <div class="hamburger-menu">
+          <!-- Hamburger icon button -->
           <div class="hamburger-icon" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
           </div>
+
+          <!-- Mobile menu links -->
           <ul class="menu-links">
             <li><a href="#about" onclick="toggleMenu()">About</a></li>
             <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
@@ -41,27 +64,50 @@
       </nav>
     </header>
 
+    <!-- =========================
+         MAIN CONTENT
+         All main sections of the portfolio
+    ========================== -->
     <main>
+
+      <!-- =========================
+           HERO / PROFILE SECTION
+           Intro area with picture, title, buttons, and social links
+      ========================== -->
       <section id="profile">
+
+        <!-- Profile image container -->
         <div class="section__pic-container">
           <img src="./assets/1729444056603.jpeg" alt="Portrait of Alvaro Langa Junior" />
         </div>
 
+        <!-- Intro text and actions -->
         <div class="section__text">
+          <!-- Small intro line -->
           <p class="section__text__p1">Hello, I'm</p>
+
+          <!-- Main name heading -->
           <h1 class="title">Alvaro</h1>
+
+          <!-- Role / subtitle -->
           <p class="section__text__p2">Computer Science Student | Web Developer</p>
-          
+
+          <!-- Main action buttons -->
           <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('assets/CV.pdf')">
+            <!-- CV link -->
+            <a href="./assets/CV.pdf" class="btn btn-color-2" target="_blank" rel="noopener noreferrer">
               Download CV
-            </button>
-            <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            </a>
+
+            <!-- Scroll to contact section -->
+            <a href="#contact" class="btn btn-color-1">
               Contact Info
-            </button>
+            </a>
           </div>
 
+          <!-- Social media links -->
           <div id="socials-container">
+            <!-- LinkedIn -->
             <a
               href="http://linkedin.com/in/alvaro-langa-jr"
               target="_blank"
@@ -70,6 +116,8 @@
             >
               <img src="./assets/linkedin.png" alt="LinkedIn profile" class="icon" />
             </a>
+
+            <!-- GitHub -->
             <a
               href="https://github.com/alvarolangajr"
               target="_blank"
@@ -82,18 +130,29 @@
         </div>
       </section>
 
+      <!-- =========================
+           ABOUT SECTION
+           Short background, education, and experience summary
+      ========================== -->
       <section id="about">
+        <!-- Section label -->
         <p class="section__text__p1">Get To Know More</p>
+
+        <!-- Section title -->
         <h2 class="title">About Me</h2>
 
         <div class="about-details-container">
+
+          <!-- Small summary cards -->
           <div class="about-containers">
+            <!-- Experience card -->
             <article class="details-container">
               <img src="./assets/experience.png" alt="Experience icon" class="icon" />
               <h3>Experience</h3>
               <p>Customer Support Representative <br />(Remote)</p>
             </article>
 
+            <!-- Education card -->
             <article class="details-container">
               <img src="./assets/education.png" alt="Education icon" class="icon" />
               <h3>Education</h3>
@@ -101,12 +160,14 @@
             </article>
           </div>
 
+          <!-- Main about text -->
           <div class="text-container">
             <p>
               I am a Computer Science student driven by curiosity and a love for technology.
               With a background in customer support, I bring the ability to solve real-world
               problems and communicate effectively within a team.
             </p>
+
             <p>
               During my time at <strong>Krämer Marktforschung GmbH</strong>, I conducted interviews
               with individuals across the world, earned positive feedback from clients, and was
@@ -117,6 +178,7 @@
                 rel="noopener noreferrer"
               >manager</a>.
             </p>
+
             <p>
               Now, I'm eager to apply my coding skills to real-world projects and collaborate
               with others to build useful solutions.
@@ -125,35 +187,50 @@
         </div>
       </section>
 
+      <!-- =========================
+           EXPERIENCE SECTION
+           Skills and tools / frameworks
+      ========================== -->
       <section id="experience">
+        <!-- Section label -->
         <p class="section__text__p1">Explore My</p>
+
+        <!-- Section title -->
         <h2 class="title">Experience</h2>
 
         <div class="experience-details-container">
           <div class="about-containers">
+
+            <!-- Skills card -->
             <article class="details-container">
               <h3 class="experience-sub-title">Skills</h3>
+
               <div class="article-container">
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>HTML</h4><p>Advanced</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>CSS</h4><p>Advanced</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>SQL</h4><p>Intermediate</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>JavaScript</h4><p>Intermediate</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>R Programming</h4><p>Basic</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>React</h4><p>Intermediate</p></div>
@@ -161,49 +238,61 @@
               </div>
             </article>
 
+            <!-- Tools / frameworks card -->
             <article class="details-container">
               <h3 class="experience-sub-title">Programs & Frameworks</h3>
+
               <div class="article-container">
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>Flutter</h4><p>Intermediate</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>GitHub</h4><p>Intermediate</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>Visual Studio Code</h4><p>Advanced</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>JetBrains Toolbox</h4><p>Intermediate</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>Git</h4><p>Intermediate</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>MySQL</h4><p>Intermediate</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>Canva</h4><p>Advanced</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>Photoshop</h4><p>Intermediate</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>Premiere Pro</h4><p>Intermediate</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>Google Workspace</h4><p>Advanced</p></div>
                 </article>
+
                 <article>
                   <img src="./assets/checkmark.png" alt="" class="icon" />
                   <div><h4>Microsoft Office</h4><p>Advanced</p></div>
@@ -214,28 +303,42 @@
         </div>
       </section>
 
+      <!-- =========================
+           PROJECTS SECTION
+           Featured projects with image, description, stack, and link
+      ========================== -->
       <section id="projects">
+        <!-- Section label -->
         <p class="section__text__p1">Browse My Recent</p>
+
+        <!-- Section title -->
         <h2 class="title">Projects</h2>
 
         <div class="projects-grid">
+
+          <!-- Project 1 -->
           <article class="project-card">
             <img
               src="assets/building-of-central-bank-or-commercial-bank-isolated-on-white-illustration-vector.jpg"
               alt="Bank System project preview"
               class="project-img"
             />
+
             <div class="project-content">
               <h3 class="project-title">Bank System</h3>
               <p class="project-description">
                 A Java-based banking system that handles account operations, transactions,
                 and object-oriented program structure.
               </p>
+
+              <!-- Tech stack tags -->
               <div class="project-tags">
                 <span>Java</span>
                 <span>OOP</span>
                 <span>CLI</span>
               </div>
+
+              <!-- Project link -->
               <div class="btn-container">
                 <a
                   class="btn btn-color-2 project-btn"
@@ -249,23 +352,29 @@
             </div>
           </article>
 
+          <!-- Project 2 -->
           <article class="project-card">
             <img
               src="assets/3d-store-building-illustration-png.webp"
               alt="E-commerce Web App project preview"
               class="project-img"
             />
+
             <div class="project-content">
               <h3 class="project-title">E-commerce Web App</h3>
               <p class="project-description">
                 A responsive front-end shopping experience focused on product browsing,
                 layout structure, and clean UI presentation.
               </p>
+
+              <!-- Tech stack tags -->
               <div class="project-tags">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
               </div>
+
+              <!-- Project link -->
               <div class="btn-container">
                 <a
                   class="btn btn-color-2 project-btn"
@@ -279,23 +388,29 @@
             </div>
           </article>
 
+          <!-- Project 3 -->
           <article class="project-card">
             <img
               src="assets/boy-holding-setting-gear-illustration-download-in-svg-png-gif-file-formats--login-security-password-protection-cyber-pack-crime-illustrations-10636506.webp"
               alt="Password Manager project preview"
               class="project-img"
             />
+
             <div class="project-content">
               <h3 class="project-title">Password Manager</h3>
               <p class="project-description">
                 A security-focused project built to store and organize credentials with a
                 simple interface and privacy-minded structure.
               </p>
+
+              <!-- Tech stack tags -->
               <div class="project-tags">
                 <span>Java</span>
                 <span>Security</span>
                 <span>Desktop App</span>
               </div>
+
+              <!-- Project link -->
               <div class="btn-container">
                 <a
                   class="btn btn-color-2 project-btn"
@@ -311,16 +426,25 @@
         </div>
       </section>
 
+      <!-- =========================
+           CONTACT SECTION
+           Email and LinkedIn contact details
+      ========================== -->
       <section id="contact">
+        <!-- Section label -->
         <p class="section__text__p1">Get In Touch</p>
+
+        <!-- Section title -->
         <h2 class="title">Contact Me</h2>
 
         <div class="contact-info-upper-container">
+          <!-- Email contact -->
           <div class="contact-info-container">
             <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
             <p><a href="mailto:alangajr05@gmail.com">alangajr05@gmail.com</a></p>
           </div>
 
+          <!-- LinkedIn contact -->
           <div class="contact-info-container">
             <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
             <p>
@@ -337,6 +461,10 @@
       </section>
     </main>
 
+    <!-- =========================
+         FOOTER
+         Repeated navigation and copyright
+    ========================== -->
     <footer>
       <nav aria-label="Footer navigation">
         <ul class="nav-links">
@@ -346,9 +474,11 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
       <p>Copyright &#169; 2025 Alvaro Langa Junior. All Rights Reserved.</p>
     </footer>
 
+    <!-- Main JavaScript file -->
     <script src="script.js"></script>
   </body>
 </html>
