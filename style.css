@@ -534,41 +534,141 @@ article p {
 
 /* =========================
    PROJECTS SECTION
-   Project image, title, and button styles
+   Clean text-based project cards
 ========================= */
 
-/* Allow absolute-positioned elements if needed */
+/* Projects section wrapper */
 #projects {
   position: relative;
 }
 
-/* Optional project card background class */
-.color-container {
-  background: linear-gradient(180deg, rgba(28, 35, 48, 0.96), rgba(18, 23, 31, 0.96));
+/* "Browse My Recent" text above the title */
+#projects .section__text__p1 {
+  margin-bottom: 0.4rem;
+  text-align: center;
 }
 
-/* Project preview image */
-.project-img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  border-radius: 20px;
+/* Main projects title */
+#projects .title {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Grid holding all project cards */
+.projects-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Individual project card */
+.project-card {
   border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(28, 35, 48, 0.96), rgba(18, 23, 31, 0.96));
+  box-shadow: var(--shadow);
+  padding: 1.35rem 1.5rem;
 }
 
-/* Project title styling */
+/* Card inner content */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+/* Project title */
 .project-title {
-  font-size: 1.5rem;
-  margin: 1.4rem 0 1rem;
+  font-size: 1.3rem;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--text);
   text-align: left;
 }
 
-/* Project button styling */
-.project-btn {
-  color: var(--text);
-  border-color: var(--line);
+/* Project description */
+.project-description {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 60ch;
 }
 
+/* Stack/tech tags wrapper */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.1rem;
+}
+
+/* Individual stack tag */
+.project-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* Project button */
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 120px;
+  padding: 0.8rem 1.1rem;
+  color: var(--text);
+  border-color: var(--line);
+  margin-top: 0.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-grid {
+    gap: 0.9rem;
+    margin-top: 1.75rem;
+  }
+
+  .project-card {
+    padding: 1.2rem;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
+  }
+
+  .project-description {
+    font-size: 0.92rem;
+  }
+}
+/* =========================
+   PROJECTS RESPONSIVE
+   Stack project card content on smaller screens
+========================= */
+@media (max-width: 768px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content {
+    padding-right: 0;
+  }
+
+  .project-img,
+  .project-cover {
+    min-height: 220px;
+    max-height: 220px;
+  }
+}
 /* =========================
    CONTACT SECTION
    Contact box layout and icons
